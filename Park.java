@@ -66,19 +66,18 @@ public class Park {
 	public String toString() {
 		// Initial message using getName which returns the name of the park to build a
 		// string.
-		if(dinoList == null)
-		{
+		if (dinoList == null) {
 			return "Park Empty";
 		}
 		String s = "Welcome to " + getName() + "!\r\n - - - - - - - - - - - - -\n";
 		// Cycles through dinoList length amount of times and appends to a string until
 		// complete.
-			for (int i = 0; i < dinoList.length; i++) {
-				s += "* " + dinoList[i].toString() + "\n";
+		for (int i = 0; i < dinoList.length; i++) {
+			s += "* " + dinoList[i].toString() + "\n";
 
-			}
-		
+		}
+
 		return s;// returns appended string
 	}
-//end
+
 }
