@@ -17,6 +17,10 @@ public class Park {
 	// newDinoList to dinoList
 	public void addDino(Dinosaur d) {
 		Dinosaur[] newDinoList;
+		// if dinoList is full return
+		if (dinoList.length == maxCapacity) {
+			return;
+		}
 		// dinoList null check, if true take dino parameter and insert it into first
 		// spot in dinoList array and returns
 		if (dinoList == null) {
@@ -24,10 +28,7 @@ public class Park {
 			dinoList[0] = d;
 			return;
 		}
-		// if dinoList is full return
-		if (dinoList.length == maxCapacity) {
-			return;
-		}
+
 		// create new array of dinoList.length + 1
 		newDinoList = new Dinosaur[dinoList.length + 1];
 		// copy contents of original array into newDinoList
