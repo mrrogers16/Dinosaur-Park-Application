@@ -2,39 +2,15 @@ package hpz729_lab1;
 
 public class Stegosaurus extends Stegosaur 
 {
-//Constructor
-	public Stegosaurus(String name, boolean veggies) 
+	//Constructor
+	public Stegosaurus(String name, boolean vegetarian) 
 	{
-		super(name, veggies);
-	}
-	
-	public String getName() 
-	{
-		return name;
+		super(name, vegetarian);
 	}
 
-	public void setName(String name) 
-	{
-		this.name = name;
-	}
-
-	public boolean isVeggies() 
-	{
-		return veggies;
-	}
-
-	public void setVeggies(boolean veggies) 
-	{
-		this.veggies = veggies;
-	}
-
+	//Stegosaur->Stegosaurus-subType: Getter
 	@Override
-	public String getType() 
-	{
-		return "Stegosaur " + getSubType();
-	}
-	@Override
-	public String getSubType()d
+	public String getSubType()
 	{
 		return "Stegosaurus";
 	}

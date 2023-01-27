@@ -1,43 +1,18 @@
 package hpz729_lab1;
 
-public class Apatosaurus extends Sauropod
+public class Apatosaurus extends Sauropod 
 {
-	//Constructor
-		public Apatosaurus(String name, boolean veggies) 
-		{
-			super(name, veggies);
-		}
-		
-		public String getName() 
-		{
-			return name;
-		}
+	// Constructor
+	public Apatosaurus(String name, boolean vegetarian)
+	{
+		super(name, vegetarian);
+	}
 
-		public void setName(String name) 
-		{
-			this.name = name;
-		}
-
-		public boolean isVeggies() 
-		{
-			return veggies;
-		}
-
-		public void setVeggies(boolean veggies) 
-		{
-			this.veggies = veggies;
-		}
-
-		@Override
-		public String getSubType()
-		{
-			return "Apatosaurus";
-		}
-
-		@Override
-		public String getType() 
-		{
-			return  + " " + getSubType();
-		}
+	//Sauropod->Apatosaurus-subType: Getter
+	@Override
+	public String getSubType() 
+	{
+		return "Apatosaurus";
+	}
 
 }

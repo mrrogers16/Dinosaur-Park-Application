@@ -2,42 +2,52 @@ package hpz729_lab1;
 
 public class Brachiosaurus extends Sauropod
 {
-	//Constructor
-		public Brachiosaurus(String name, boolean veggies) 
+	//Sauropod->Brachiosaurus: Constructor
+		public Brachiosaurus(String name, boolean vegetarian) 
 		{
-			super(name, veggies);
+			super(name, vegetarian);
+			this.name = name;
+			this.vegetarian = vegetarian;
 		}
-		
+		//Sauropod->Brachiosaurus-name: Getter
 		public String getName() 
 		{
 			return name;
 		}
-
+		//Sauropod->Brachiosaurus-name: Setter
 		public void setName(String name) 
 		{
 			this.name = name;
 		}
-
-		public boolean isVeggies() 
+		//Sauropod->Brachiosaurus-vegetarian(boolean): Getter
+		public boolean isVegetarian() 
 		{
-			return veggies;
+			return vegetarian;
 		}
-
-		public void setVeggies(boolean veggies) 
+		//Sauropod->Brachiosaurus-vegetarian(boolean): Setter
+		public void setVegetarian(boolean vegetarian) 
 		{
-			this.veggies = veggies;
+			this.vegetarian = vegetarian;
 		}
-
+		//Sauropod->Brachiosaurus-subType: Getter
 		@Override
 		public String getSubType()
 		{
 			return "Brachiosaurus";
 		}
-
 		@Override
-		public String getType(Dinosaur d) 
+		public String toString() 
 		{
-			return d.getName() + " " + getSubType();
-		
+			String vegetarian = " ";
+			if(this.vegetarian)
+			{
+				vegetarian = "(not carnivore)";
+			}
+			else
+			{
+				vegetarian = "(carnivore)";
+			}
+			
+			return getType() + " named " + getName() + vegetarian;
 		}
 }

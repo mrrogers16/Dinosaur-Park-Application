@@ -3,39 +3,60 @@ package hpz729_lab1;
 public abstract class Stegosaur implements Dinosaur 
 {
 	String name; 
-	boolean veggies;
-//Constructor
-	public Stegosaur(String name, boolean veggies)
+	boolean vegetarian;
+	//Stegosaur constructor
+	public Stegosaur(String name, boolean vegetarian)
 	{
 		this.name = name;
-		this.veggies = veggies;
+		this.vegetarian = vegetarian;
 	}
+	//Stegosaur-name: Getter
 	public String getName() 
 	{
 		return name;
 	}
+	//Stegosaur-name: Setter
 	public void setName(String name) 
 	{
 		this.name = name;
 	}
-	public boolean isVeggies()
+	//Stegosaur-vegetarian: Getter
+	public boolean isVegetarian()
 	{
-		return veggies;
+		return vegetarian;
 	}
-	public void setVeggies(boolean veggies) 
+	//Stegosaur-vegetarian: Getter
+	public void setVeggies(boolean vegetarian) 
 	{
-		this.veggies = veggies;
+		this.vegetarian = vegetarian;
 	}
 	
-	
-	public String toString(String name)
+	//Stegosaur toString() method
+	//Checks boolean value and assigns appropriate carnivore status.
+	//returns String built by calling the subclasses getType() and getName() methods 
+	//and appends carnivore status to vegetarian
+	public String toString()
 	{
-		return name;
+		String vegetarian = null;
+		if(this.vegetarian)
+		{
+			vegetarian = "(not carnivore)";
+		}
+		else
+		{
+			vegetarian = "(carnivore)";
+		}
+		
+		return getType() + " named " + getName() + vegetarian;
 	}
+	//Theropod-type: getter
+	//Returns String built by calling getSubType() from subclass 
+	//and appending to a
 	public String getType()
 	{
-		return "Stegosaur" + getSubType();
+		return "Stegosaur: " + getSubType();
 	}
+	//Abstract getSubType for subclass
 	public abstract String getSubType();
 
 }

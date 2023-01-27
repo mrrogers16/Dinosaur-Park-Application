@@ -16,9 +16,8 @@ public class Lab1 {
 		
 		// create a Park object 
 		Park jurassicPark = new Park( "Jurassic Park", 10 );
-		
+		//Park myPark = new Park("Micks haven", 12);
 		// All Parks contains Dinosaurs which come in different 3 types in our Jurassic Park: theropods, sauropods, & stegosaurs.
-		
 		// create dinosaurs to add to the park
 		Theropod blue = new Velociraptor( "Blue", false );					// Velociraptors are a type of Theropod, which is a type of Dinosaur
 		Theropod delta = new Velociraptor( "Delta", false );				// Velociraptors are a type of Theropod, which is a type of Dinosaur
@@ -26,7 +25,11 @@ public class Lab1 {
 		Theropod rex = new Tyrannosaurus( "Rex", false );					// Tyrannosaurus are a type of Theropod, which is a type of Dinosaur
 		Sauropod littleFoot = new Apatosaurus( "Littlefoot", true );		// Apatosaurus are a type of Sauropod, which is a type of Dinosaur
 		Sauropod bob = new Brachiosaurus( "Bob", true );					// Brachiosaurus are a type of Sauropod, which is a type of Dinosaur
-		Stegosaur spike = new Stegosaurus( "Spike", true );					// Stegosaurus are a type of Stegosaur, which is a type of Dinosaur
+		Stegosaur spike = new Stegosaurus( "Spike", true );
+		
+		//Theropod mick = new Velociraptor("Mickeyy", false);
+		
+		// Stegosaurus are a type of Stegosaur, which is a type of Dinosaur
 		
 		// add all dinos to the park
 		jurassicPark.addDino( blue );
@@ -37,8 +40,11 @@ public class Lab1 {
 		jurassicPark.addDino( bob );
 		jurassicPark.addDino( spike );
 		
+		//myPark.addDino(mick);
+		
 		// print the state of the park (see lab description)
 		System.out.println( jurassicPark );
+		//System.out.println("\n" + myPark);
 	}
 }
 

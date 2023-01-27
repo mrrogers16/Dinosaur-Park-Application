@@ -3,44 +3,64 @@ package hpz729_lab1;
 public abstract class Theropod implements Dinosaur 
 {
 	String name; 
-	boolean veggies;
-	//Constructor
-	public Theropod(String name, boolean veggies)
+	boolean vegetarian;
+	
+	//Theropod Constructor
+	public Theropod(String name, boolean vegetarian)
 	{
 		this.name = name;
-		this.veggies = veggies;
+		this.vegetarian = vegetarian;
 	}
+	//Theropod-name: Getter
 	public String getName() 
 	{
 		return name;
 	}
+	//Theropod-name: Setter
 	public void setName(String name) 
 	{
 		this.name = name;
 	}
-	public boolean isVeggies()
+	//Theropod-vegetarian: Getter
+	public boolean isVegetarian()
 	{
-		return veggies;
+		return vegetarian;
 	}
-	public void setVeggies(boolean veggies) 
+	//Theropod-vegetarian: Setter
+	public void setVegetarian(boolean vegetarian) 
 	{
-		this.veggies = veggies;
+		this.vegetarian = vegetarian;
 	}
-	public String toString(String name)
+	
+	/*Theropod toString method. Checks boolean value and assigns appropriate carnivore status.
+	returns String built by calling the subclasses getType() and getName() methods and appends 
+	carnivore status to vegetarian*/
+	public String toString()
 	{
-		return name;
+		String vegetarian = "";
+		if(this.vegetarian)
+		{
+			vegetarian = "(not carnivore)";
+		}
+		else
+		{
+			vegetarian = "(carnivore)";
+		}
+		
+		return getType() + " named " + getName() + vegetarian;
 	}
+	/*Theropod-type: getter
+	Returns String built by calling getSubType() 
+	from subclass and appending to a string
+	*/
 	public String getType()
 	{
-		
 		return "Theropod: " + getSubType();
 	}
-	
-	
+	//Abstract getSubType for subclass
 	public abstract String getSubType();
 
 	
-//An abstract method getSubType(), which takes no parameters and returns a sub type of dinosaur (e.g. “Velociraptor”). This method should be called by the getType() method.
 
 }
 
