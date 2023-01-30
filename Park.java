@@ -17,6 +17,7 @@ public class Park {
 	// newDinoList to dinoList
 	public void addDino(Dinosaur d) {
 		Dinosaur[] newDinoList;
+
 		// dinoList null check, if true take dino parameter and insert it into first
 		// spot in dinoList array and returns
 		if (dinoList == null) {
@@ -24,10 +25,11 @@ public class Park {
 			dinoList[0] = d;
 			return;
 		}
-		// if dinoList is full return
+		//if dinoList is full return
 		if (dinoList.length == maxCapacity) {
 			return;
 		}
+
 		// create new array of dinoList.length + 1
 		newDinoList = new Dinosaur[dinoList.length + 1];
 		// copy contents of original array into newDinoList
@@ -66,18 +68,17 @@ public class Park {
 	public String toString() {
 		// Initial message using getName which returns the name of the park to build a
 		// string.
-		if(dinoList == null)
-		{
+		if (dinoList == null) {
 			return "Park Empty";
 		}
 		String s = "Welcome to " + getName() + "!\r\n - - - - - - - - - - - - -\n";
 		// Cycles through dinoList length amount of times and appends to a string until
 		// complete.
-			for (int i = 0; i < dinoList.length; i++) {
-				s += "* " + dinoList[i].toString() + "\n";
+		for (int i = 0; i < dinoList.length; i++) {
+			s += "* " + dinoList[i].toString() + "\n";
 
-			}
-		
+		}
+
 		return s;// returns appended string
 	}
 
