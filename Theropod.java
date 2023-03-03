@@ -57,7 +57,7 @@ public abstract class Theropod implements Dinosaur
 	{
 		return "Theropod: " + getSubType();
 	}
-	//Abstract getSubType for subclass
+	//Abstract method getSubType for subclass
 	public abstract String getSubType();
 
 	
